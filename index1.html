@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/main.css"
+    />
+    <title>Animated Collapsibles</title>
+  </head>
+  <body>
+    <h2>Animated Collapsibles</h2>
+
+    <div class="collapsible">
+      <button class="collapsible__button">Open Collapsible</button>
+      <div class="collapsible__content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__button">Open Section 1</button>
+      <div class="collapsible__content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__button">Open Section 2</button>
+      <div class="collapsible__content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__button">Open Section 3</button>
+      <div class="collapsible__content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName('collapsible__button');
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener('click', function () {
+          var wrapper = this.parentElement;
+          coll.classList.toggle('active');
+          var content = this.nextElementSibling;
+          if (wrapper.classList.contains('active')) {
+            content.style.borderTopLeftRadius = '0';
+            content.style.borderTopRightRadius = '0';
+            content.style.bottom = 0;
+            content.style.maxHeight = content.scrollHeight + 'px';
+          } else {
+            content.style.borderTopLeftRadius = '24px';
+            content.style.borderTopRightRadius = '24px';
+            content.style.bottom = '24px';
+            content.style.maxHeight = null;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

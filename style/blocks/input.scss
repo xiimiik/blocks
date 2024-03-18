@@ -1,0 +1,44 @@
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: $light-grayish-blue;
+
+  &__title {
+    @include secondary-text;
+    padding-left: 16px;
+  }
+
+  &__input {
+    @include main-text;
+
+    background-color: $light-grayish-blue;
+    font-family: inherit;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid $c-gray7;
+    padding: 13px 16px;
+
+    &::placeholder {
+      color: $c-gray7;
+    }
+  }
+
+  &__select {
+    @include main-text;
+    width: 100%;
+    position: relative;
+
+    font-family: inherit;
+    background: $light-grayish-blue;
+    border: 0;
+    outline: none;
+    box-shadow: inset 0 0 0 5px $light-grayish-blue !important;
+
+    padding: 13px 16px;
+
+    border-bottom: 1px solid $c-gray7;
+    cursor: pointer;
+  }
+}

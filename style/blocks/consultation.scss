@@ -1,0 +1,34 @@
+.consultation {
+  background-color: $light-grayish-blue;
+
+  &__content {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include h1;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    @include h3;
+    margin-bottom: 24px;
+  }
+
+  &__therapy-list {
+    margin-bottom: 40px;
+  }
+
+  &__therapy-list,
+  &__consul-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include onMobile {
+      grid-template-columns: 1fr;
+    }
+
+    gap: 20px;
+  }
+}

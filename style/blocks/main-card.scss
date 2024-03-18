@@ -1,0 +1,45 @@
+.main-card {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  background-color: $c-white;
+  border-radius: 16px;
+
+
+  &__image {
+    border-radius: 100%;
+    width: 82px;
+    height: 82px;
+    margin-right: 24px;
+  }
+
+  &__content {
+    margin-right: auto;
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 17px;
+  }
+
+  &__numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__numbers:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $c-primary;
+    border-radius: 12px;
+    min-width: 58px;
+    height: 58px;
+  }
+}

@@ -1,0 +1,23 @@
+.icons {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+
+  &--wallet {
+    background-image: url('../assets/images/wallet.svg');
+  }
+
+  &--clock {
+    background-image: url('../assets/images/clock.svg');
+  }
+
+  &--arrow {
+    width: 10px;
+    height: 18px;
+    background-image: url('../assets/images/arrow-right.svg');
+  }
+
+  &--viber {
+    background-image: url('../assets/images/viber.svg');
+  }
+}

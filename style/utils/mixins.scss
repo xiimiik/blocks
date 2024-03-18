@@ -1,0 +1,17 @@
+@mixin djc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin onTablet {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: 780px) {
+    @content;
+  }
+}

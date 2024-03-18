@@ -1,0 +1,41 @@
+.team-card {
+  display: block;
+  width: 380px;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px rgba(102, 119, 138, 0.35);
+
+  &__photo {
+    width: 100%;
+    border-radius: 190px;
+    padding: 0 24px 0 24px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    @include main-text;
+    margin-bottom: 16px;
+    color: $c-gray9;
+  }
+
+  &__button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 0;
+    border: 1px solid $c-primary;
+    border-radius: 12px;
+
+    &-text {
+      @include h3;
+      color: $c-primary;
+    }
+  }
+}

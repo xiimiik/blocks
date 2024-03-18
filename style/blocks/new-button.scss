@@ -1,0 +1,22 @@
+.new-button {
+  @include main-text;
+
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  height: 46px;
+  background-color: $c-primary;
+  color: $c-white;
+  outline: none;
+  border: 0;
+  width: 100%;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid $light-grayish-blue;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:focus {
+    border: 1px solid transparent;
+  }
+}

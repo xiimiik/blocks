@@ -1,0 +1,70 @@
+.main-form {
+  background-color: $light-grayish-blue;
+  padding-top: 52px;
+  padding-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include onTablet {
+    padding: 20px;
+    padding-top: 52px;
+    padding-bottom: 140px;
+  }
+
+  @include onMobile {
+    padding: 20px;
+  }
+
+  &__content {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+
+    @include onMobile {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__text-wrapper {
+    max-width: 580px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 3;
+  }
+
+  &__title {
+    @include h1;
+  }
+
+  &__text {
+    @include secondary-text;
+
+    @include onMobile {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__form {
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  &__input {
+    width: 48%;
+    min-width: 250px;
+  }
+
+  &__button {
+    width: 48%;
+    min-width: 250px;
+  }
+}
